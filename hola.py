@@ -1,2 +1,0 @@
-print("Listas y colas")
-
