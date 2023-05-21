@@ -1,12 +1,12 @@
 #include <iostream>
-typedef int Dato; 
+typedef int Dato;
 #include "Nodo.h"
 #include "Lista.h"
 using namespace std;
 int main()
 {
 Dato d;
-Lista lista; // crea lista vacía 
+Lista lista; // crea lista vacía
   cout << "Elementos de la lista, termina con -1 "<< endl;
   do {
     cin>> d;
