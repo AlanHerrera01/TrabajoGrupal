@@ -1,3 +1,6 @@
+/*Crear una lista de números enteros positivos al azar. Insertar por el último nodo.
+• Recorrer la lista para mostrar los elementos por pantalla.
+• Eliminar todos los nodos que superen un valor dado. */
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -49,30 +52,24 @@ void eliminarMayores(Nodo** primero, Nodo** ultimo, int valor) {
             actual = actual->siguiente;
         }
     }
-
     *ultimo = anterior;
 }
 
 int main() {
-    srand(time(nullptr)); // Inicializar semilla para n�meros aleatorios
+    srand(time(nullptr)); // Inicializar semilla para n�meros aleatorios
 	 int valor;
     Nodo* primero = nullptr;
     Nodo* ultimo = nullptr;
-
     for (int i = 0; i < 10; i++) {
-        int dato = rand() % 100 + 1; // Generar n�mero aleatorio entre 1 y 100
+        int dato = rand() % 100 + 1; // Generar n�mero aleatorio entre 1 y 100
         insertar(&primero, &ultimo, dato);
     }
-
     std::cout << "Lista original: "<<std::endl;
     mostrar(primero);
 	std::cout << "Ingrese el limite maximo: ";
     std::cin>>valor;
     eliminarMayores(&primero, &ultimo, valor);
-
     std::cout << "Lista despues de eliminar los nodos mayores a " << valor << ":  "<<std::endl;
-
     mostrar(primero);
-
     return 0;
 }
