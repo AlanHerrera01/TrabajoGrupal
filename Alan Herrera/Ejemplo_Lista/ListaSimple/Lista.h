@@ -3,13 +3,15 @@ using namespace std;
 typedef int dato;
 #include "Nodo.h"
 class Lista{
-protected:
-Nodo* primero;
-public:
- Lista();
- void crearLista();
- void insertarCabezaLista(Dato entrada);
- void visualizar ();
+	protected:
+	Nodo* primero;
+	public:
+	Lista(){
+		primero = NULL;
+	}
+	void crearLista();
+	void insertarCabezaLista(Dato entrada);
+	void visualizar ();
 };
 void crearLista(){
   int x;
